@@ -16,6 +16,23 @@ body {
     background-color: #151326;
 }
 
+/* 背景画像 */
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background-image: url("images/ending-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    filter: brightness(7);
+
+    z-index: -1;
+}
+
 /* エンディング全体 */
 .ending {
     width: 100%;
@@ -66,6 +83,15 @@ body {
     letter-spacing: 8px;
 
     margin-bottom: 20px;
+    
+    /* 文字のカラー：紫蛍光 */
+    color: #e8d7ff;
+    
+    text-shadow:
+        0 0 3px #c77dff,
+        0 0 6px #c77dff,
+        0 0 12px #a855f7,
+        0 0 20px #9333ea;
 }
 
 /* 「~~の道」 */
@@ -122,4 +148,4 @@ body {
 .button:hover {
     background: #7966ad;
     transform: translateY(-2px);
-}
+
