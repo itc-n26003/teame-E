@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Noto Serif JP", "Yu Mincho", serif;
+    color: white;
+    background-color: #151326;
+}
+
+/* エンディング全体 */
+.ending {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 12, 30, 0.55),
+            rgba(15, 12, 30, 0.75)
+        ),
+        url("images/ending-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 真ん中の文章部分 */
+.ending-content {
+    width: 80%;
+    max-width: 800px;
+
+    padding: 50px;
+
+    text-align: center;
+
+    background: rgba(10, 8, 20, 0.75);
+
+    border: 1px solid rgba(190, 170, 230, 0.5);
+    border-radius: 15px;
+}
+
+/* ~~~~ END */
+.ending-title {
+    font-size: 50px;
+    font-weight: bold;
+
+    text-align: center;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 20px;
+}
+
+/* 「~~の道」 */
+.ending-name {
+    font-size: 30px;
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+/* ストーリー本文 */
+.ending-story {
+    max-width: 650px;
+
+    margin: 0 auto 40px;
+
+    font-size: 20px;
+    line-height: 1;
+
+    text-align: center;
+}
+
+/* GAME CLEAR */
+.game-clear {
+    font-size: 24px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 30px;
+}
+
+/* ボタン */
+.button {
+    display: inline-block;
+
+    padding: 12px 35px;
+
+    font-size: 18px;
+    color: white;
+
+    text-decoration: none;
+
+    background: #5c4b8a;
+
+    border: 2px solid #9b8ac4;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #7966ad;
+    transform: translateY(-2px);
+}
