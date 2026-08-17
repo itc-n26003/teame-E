@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>分岐画面</title>
+    <meta name="description" content="分岐担当、分岐させます">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="game">
+
+        <h1>主人公はどこへ向かう？</h1>
+
+        <button onclick="choose('city')">
+            魔導都市へ行く
+        </button>
+
+        <button onclick="choose('ruins')">
+            古代遺跡へ行く
+        </button>
+
+        <p id="result"></p>
+
+    </div>
+
+
+    <script>
+
+        function choose(place) {
+
+            if (place === 'city') {
+
+                document.getElementById('game').innerHTML = `
+                    <h1>王国を信じますか？</h1>
+
+                    <button onclick="choose('trust')">
+                        王国を信じる
+                    </button>
+
+                    <button onclick="choose('doubt')">
+                        王国を疑う
+                    </button>
+
+                `;
+
+            }
+
+            else if (place === 'ruins') {
+
+                document.getElementById('game').innerHTML = `
+                    <h1>エターナル・コアをどうする？</h1>
+
+                    <button onclick="choose('revive')">
+                        復活させる
+                    </button>
+
+                    <button onclick="choose('destroy')">
+                        破壊する
+                    </button>
+
+                `;
+
+            }
+
+            else if (place === 'trust') {
+
+                document.getElementById('game').innerHTML = `
+                    <h1>王国を信じた</h1>
+                    <p>主人公は王国と共に戦うことを決意した。</p>
+
+                    <button onclick="location.reload()">
+                        最初に戻る
+                    </button>
+                `;
+
+            }
+
+            else if (place === 'doubt') {
+
+                document.getElementById('game').innerHTML = `
+                    <h1>王国を疑った</h1>
+                    <p>主人公は王国の秘密を探ることにした。</p>
+
+                    <button onclick="location.reload()">
+                        最初に戻る
+                    </button>
+                `;
+
+            }
+
+            else if (place === 'revive') {
+
+                document.getElementById('game').innerHTML = `
+                    <h1>エターナル・コアを復活させた</h1>
+                    <p>封印されていた力が目を覚ました。</p>
+
+                    <button onclick="location.reload()">
+                        最初に戻る
+                    </button>
+                `;
+
+            }
+
+            else if (place === 'destroy') {
+
+                document.getElementById('game').innerHTML = `
+                    <h1>エターナル・コアを破壊した</h1>
+                    <p>世界を脅かす力は消滅した。</p>
+
+                    <button onclick="location.reload()">
+                        最初に戻る
+                    </button>
+                `;
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
