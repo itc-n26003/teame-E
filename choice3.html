@@ -36,14 +36,12 @@
                 document.getElementById('game').innerHTML = `
                     <h1>王国を信じますか？</h1>
 
-                    <button onclick="choose('trust')">
+                    <button onclick="location.href='ending1.html'"> 
                         王国を信じる
                     </button>
-
-                    <button onclick="choose('doubt')">
+		    <button onclick="location.href='ending2.html'">
                         王国を疑う
                     </button>
-		    
                 `;
 
             }
@@ -53,14 +51,13 @@
                 document.getElementById('game').innerHTML = `
                     <h1>エターナル・コアをどうする？</h1>
 
-                    <button onclick="choose('revive')">
+                    <button onclick="location.href='ending3.html'">
                         復活させる
-                    </button>
+		    </button>
 
-                    <button onclick="choose('destroy')">
+                    <button onclick="location.href='ending4.html'">
                         破壊する
                     </button>
-
                 `;
 
             }
