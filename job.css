@@ -1,0 +1,151 @@
+/* ページ全体 *//
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+
+    background: #151525;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 職業選択画面 */
+.job-container {
+    width: 90%;
+    max-width: 1100px;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+/* タイトル */
+h1 {
+    margin-bottom: 10px;
+
+    font-size: 36px;
+    letter-spacing: 4px;
+}
+
+.subtitle {
+    margin-bottom: 40px;
+
+    color: #bbbbcc;
+}
+
+/* 職業カード4枚 */
+.job-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+/* カード */
+.job-card {
+    padding: 30px;
+
+    background: #22223a;
+
+    border: 2px solid #444466;
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+/* マウスを乗せたとき */
+.job-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #8f7cff;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* 職業アイコン */
+.job-icon {
+    font-size: 60px;
+
+    margin-bottom: 10px;
+}
+
+/* 職業名 */
+.job-card h2 {
+    font-size: 26px;
+
+    margin: 10px 0;
+}
+
+/* 説明 */
+.job-card > p {
+    color: #ccccdd;
+
+    line-height: 1.7;
+
+    min-height: 50px;
+}
+
+/* ステータス */
+.status {
+    margin: 20px 0;
+
+    text-align: left;
+
+    background: #18182a;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+}
+
+.status p {
+    margin: 8px 0;
+}
+
+/* ボタン */
+button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #6c5ce7;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+/* ボタンにマウスを乗せたとき */
+button:hover {
+    background: #8f7cff;
+
+    transform: scale(1.03);
+}
+
+/* スマホ対応 */
+@media (max-width: 700px) {
+
+    .job-list {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
